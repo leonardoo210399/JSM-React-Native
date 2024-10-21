@@ -4,11 +4,11 @@
     "slug": "aora",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "assets/images/profile.png",
     "scheme": "aora",
     "userInterfaceStyle": "automatic",
     "splash": {
-      "image": "assets/splash.png",
+      "image": "assets/1.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },

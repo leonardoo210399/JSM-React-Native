@@ -6,16 +6,52 @@
   "build": {
     "development": {
       "developmentClient": true,
-      "distribution": "internal"
+      "distribution": "internal",
+      "android": {
+        "buildType": "apk",
+        "gradleCommand": ":app:assembleDebug", 
+        "releaseChannel": "development"
+      },
+      "ios": {
+        "simulator": true,
+        "buildConfiguration": "Debug",
+        "releaseChannel": "development"
+      }
     },
     "preview": {
-      "distribution": "internal"
+      "distribution": "internal",
+      "android": {
+        "buildType": "apk",
+        "gradleCommand": ":app:assembleDebug",
+        "releaseChannel": "preview"
+      },
+      "ios": {
+        "simulator": false,
+        "releaseChannel": "preview"
+      }
     },
     "production": {
-      "autoIncrement": true
+      "autoIncrement": true,
+      "android": {
+        "buildType": "apk",  
+        "gradleCommand": ":app:assembleRelease",  
+        "releaseChannel": "production"
+      },
+      "ios": {
+        "simulator": false,
+        "buildConfiguration": "Release",
+        "releaseChannel": "production"
+      }
     }
   },
   "submit": {
-    "production": {}
+    "production": {
+      "android": {
+        "track": "production"
+      },
+      "ios": {
+        "ascAppId": "your-app-store-connect-id"
+      }
+    }
   }
 }
